@@ -14,7 +14,7 @@ figure
 for i = 1 : length(sensorIDs)
     sensorID = sensorIDs(i);
     load(['.\sensorData_version2\' num2str(sensorID) '.mat']);
-    plot(flowDataSum(startIndex:endIndex), [col(i) '.']);
+    plot(flowDataSum(startIndex:endIndex), [col(i)]);
     hold on
 end
 xlabel('time');
