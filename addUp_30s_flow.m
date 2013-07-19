@@ -36,5 +36,6 @@ for i = 1 : length(sensorIDs)
     end
     
     flowDataSum = flowDataSum_30s;
+    flowDataLanes = flowDataLanes_30s;
     save([num2str(newSensorDataFolder) '\' num2str(sensorID)], 'flowDataSum', 'flowDataLanes');
 end
