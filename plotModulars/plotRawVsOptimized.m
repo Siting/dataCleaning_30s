@@ -2,8 +2,8 @@ clear all
 clc
 
 sensorIDs = [400468; 400739; 400363; 400698];
-startTime = 4;
-endTime = 5.5;
+startTime = 8;
+endTime = 10;
 
 startIndex = (startTime * 3600)/30 + 1;
 endIndex = (endTime * 3600)/30 + 1;
@@ -14,10 +14,10 @@ figure
 for i = 1 : length(sensorIDs)
     subplot(2,2,i)
     sensorID = sensorIDs(i);
-    load(['.\sensorData_version3\' num2str(sensorID) '.mat']);
+    load(['.\sensorData_version6_2s\' num2str(sensorID) '.mat']);
     plot(flowDataSum(startIndex:endIndex), 'r.');
     hold on
-    load(['.\sensorData_version2\' num2str(sensorID) '.mat']);
+    load(['.\sensorData_version8_2s\' num2str(sensorID) '.mat']);
     plot(flowDataSum(startIndex:endIndex), 'k.');
     title(['sensor' num2str(sensorID)]);
     legend('optimized', 'raw');

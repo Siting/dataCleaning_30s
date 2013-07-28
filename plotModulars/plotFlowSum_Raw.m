@@ -1,9 +1,9 @@
 clear all
 clc
 
-sensorIDs = [400468; 400739; 400363; 400698];
-startTime = 4;
-endTime = 5.5;
+sensorIDs = [400468; 400698];
+startTime = 8;
+endTime = 10;
 
 startIndex = (startTime * 3600)/30 + 1;
 endIndex = (endTime * 3600)/30 + 1;
