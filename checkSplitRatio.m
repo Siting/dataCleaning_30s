@@ -19,5 +19,11 @@ a = splitRatio(find(0<=splitRatio<=1));
 b = a(find(isinf(a)==0));
 
 mean(b)
+mean(b(960:1200))
+figure
+plot(b)
+saveas(gcf, ['.\Plots\splitRatio_realTime.pdf']);
+
+figure
 hist(b)
 saveas(gcf, ['.\Plots\splitRatio.pdf']);
